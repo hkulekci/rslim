@@ -9,7 +9,7 @@
             /controller_name
                 action_name.html
             _main_template_file_name.html
-        /webroot
+        /webroot # Set your web server virtual host's configuration root directory as this directory
             index.php
         app_config.php
 /lib  # run composer require --prefer-dist reformo/rslim "^1.0" command in here.
