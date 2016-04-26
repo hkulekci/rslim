@@ -1,3 +1,6 @@
 .DS_Store
 .idea
 
+## Composer Files
+vendor/*
+composer.lock
