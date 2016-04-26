@@ -9,7 +9,7 @@ Basically Slim but based on convention over configuration. Do not install until 
 It's recommended that you use [Composer](https://getcomposer.org/) to install RSlim.
 
 ```bash
-$ composer require --prefer-dist reformo/rslim "^0.9"
+$ composer require --prefer-dist reformo/rslim "^1.0"
 ```
 
 This will install RSlim and all required dependencies. RSlim requires PHP 5.5.0 or newer. slim/slim and twig/twig packages..

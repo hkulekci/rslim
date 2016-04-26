@@ -12,8 +12,10 @@
         /webroot
             index.php
         app_config.php
-/lib  # run composer require --prefer-dist reformo/rslim "^0.9" command in here.
+/lib  # run composer require --prefer-dist reformo/rslim "^1.0" command in here.
       # Rest of the folders and files will be created automatically. Just added sample folders
+      # After composer installed the packages you can run the command  'cp -rf vendor/reformo/rslim/apps ../apps' here
+      # to generate apps folder mentioned above automatically
     /vendor
         autoload.php
         /composer
@@ -25,44 +27,3 @@
 
 ```
 
-
-## Installation
-
-It's recommended that you use [Composer](https://getcomposer.org/) to install RSlim.
-
-```bash
-$ composer require --prefer-dist reformo/rslim "^0.9"
-```
-
-This will install RSlim and all required dependencies. RSlim requires PHP 5.5.0 or newer. slim/slim and twig/twig packages..
-
-## Usage
-```
-
-$config =[
-    'base_dir'  => dirname(dirname(__DIR__)),
-    'base_url'  => 'http://www.reformo.dev',
-    'app_name'  => basename(__DIR__),
-    'app'=>[
-        'debug'     => 1,
-        'timezone'  => 'Europe/Istanbul'
-    ]
-];
-
-$RSlim = new \RSlim\RSlim($config);
-
-/*
- $RSlim->register($request_method, $route, $controller, $return_type);
-*/
-
-$RSlim->register("get", '/', 'app/main');
-$RSlim->register("get", "/hello", "app/hello");
-$RSlim->register("post", "/hello", "app/hello.post");
-$RSlim->register("get", "/hello/{name}", "app/hello_name", "json");
-$RSlim->run();
-
-```
-
-## Contribute
-* Open issue if found bugs or sent pull request.
-* Feel free to ask if have any questions.
